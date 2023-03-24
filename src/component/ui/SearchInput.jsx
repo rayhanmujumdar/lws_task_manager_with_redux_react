@@ -6,9 +6,7 @@ export default function SearchInput() {
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   useEffect(() => {
-    if (search) {
-      dispatch(filterSearchBox(search));
-    }
+    dispatch(filterSearchBox(search));
   }, [search]);
   return (
     <div className="flex-1 max-w-xs search-field group">

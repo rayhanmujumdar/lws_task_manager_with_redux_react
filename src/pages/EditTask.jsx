@@ -61,7 +61,6 @@ export default function EditTask() {
       setProjectName(data[0]);
     }
   };
-  console.log({ teamMemberName, projectName });
   // handleSubmit for edit
   const handleSubmit = (e) => {
     e.preventDefault();

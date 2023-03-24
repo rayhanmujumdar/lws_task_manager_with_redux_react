@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   projects: [],
-  searchBox: "",
+  searchText: "",
 };
 const filterSlice = createSlice({
   name: "filter",
@@ -17,7 +17,7 @@ const filterSlice = createSlice({
         state.projects = state.projects.filter(project => project !== action.payload)
     },
     filterSearchBox: (state, action) => {
-        state.searchBox = action.payload
+        state.searchText = action.payload
     },
   },
 });

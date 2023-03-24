@@ -70,89 +70,41 @@
   ],
   "tasks": [
     {
-      "taskName": "Task One",
+      "taskName": "All day i worksdfdsf",
       "teamMember": {
         "name": "Saad Hasan",
         "avatar": "/images/avatars/sadh.png",
         "id": 2
       },
       "project": {
-        "id": 1,
-        "projectName": "Scoreboard",
-        "colorClass": "color-scoreboard"
-      },
-      "deadline": "2023-03-15",
-      "id": 1,
-      "status": "inProgress"
-    },
-    {
-      "taskName": "Task Two",
-      "teamMember": {
-        "name": "Akash Ahmed",
-        "avatar": "/images/avatars/akash.png",
-        "id": 3
-      },
-      "project": {
         "id": 2,
         "projectName": "Flight Booking",
         "colorClass": "color-flight"
       },
-      "deadline": "2023-03-23",
-      "id": 2,
-      "status": "completed"
+      "deadline": "2023-03-24",
+      "id": 1
     },
     {
-      "taskName": "Task Three",
+      "taskName": "All day i work",
       "teamMember": {
-        "name": "Sumit Saha",
-        "avatar": "/images/avatars/sumit.png",
-        "id": 1
+        "name": "Saad Hasan",
+        "avatar": "/images/avatars/sadh.png",
+        "id": 2
       },
-      "project": {
-        "id": 3,
-        "projectName": "Product Cart",
-        "colorClass": "color-productCart"
-      },
-      "deadline": "2023-03-03",
-      "id": 3
-    },
-    {
-      "taskName": "New Task",
-      "teamMember": {
-        "name": "Sumit Saha",
-        "avatar": "/images/avatars/sumit.png",
-        "id": 1
-      },
-      "project": {
-        "id": 1,
-        "projectName": "Scoreboard",
-        "colorClass": "color-scoreboard"
-      },
-      "deadline": "2023-03-11",
-      "id": 4
-    },
-    {
-      "taskName": "Fix a bug",
-      "teamMember": {
-        "name": "Md Salahuddin",
-        "avatar": "/images/avatars/salahuddin.png",
-        "id": 4
-      },
-      "deadline": "2023-03-18",
       "project": {
         "id": 4,
         "projectName": "Book Store",
         "colorClass": "color-bookstore"
       },
-      "id": 5,
-      "status": "completed"
+      "deadline": "2023-03-24",
+      "id": 2
     },
     {
-      "taskName": "amar sonar bangla ami toamyy",
+      "taskName": "All day i worksdfdsf",
       "teamMember": {
-        "name": "Sumit Saha",
-        "avatar": "/images/avatars/sumit.png",
-        "id": 1
+        "name": "Akash Ahmed",
+        "avatar": "/images/avatars/akash.png",
+        "id": 3
       },
       "project": {
         "id": 3,
@@ -160,7 +112,22 @@
         "colorClass": "color-productCart"
       },
       "deadline": "2023-03-24",
-      "id": 6
+      "id": 3
+    },
+    {
+      "taskName": "All day i work",
+      "teamMember": {
+        "name": "Saad Hasan",
+        "avatar": "/images/avatars/sadh.png",
+        "id": 2
+      },
+      "project": {
+        "id": 3,
+        "projectName": "Product Cart",
+        "colorClass": "color-productCart"
+      },
+      "deadline": "2023-03-24",
+      "id": 4
     }
   ]
 }
