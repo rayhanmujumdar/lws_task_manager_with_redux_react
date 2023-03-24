@@ -98,7 +98,8 @@
         "colorClass": "color-flight"
       },
       "deadline": "2023-03-23",
-      "id": 2
+      "id": 2,
+      "status": "completed"
     },
     {
       "taskName": "Task Three",
@@ -160,21 +161,6 @@
       },
       "deadline": "2023-03-24",
       "id": 6
-    },
-    {
-      "taskName": "All day i work",
-      "teamMember": {
-        "name": "Riyadh Hassan",
-        "avatar": "/images/avatars/riyadh.png",
-        "id": 5
-      },
-      "project": {
-        "id": 6,
-        "projectName": "Job Finder",
-        "colorClass": "color-jobFinder"
-      },
-      "deadline": "2023-03-24",
-      "id": 7
     }
   ]
 }

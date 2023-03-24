@@ -23,7 +23,6 @@ export default function Projects() {
     <div>
       <h3 className="text-xl font-bold">Projects</h3>
       <div className="mt-3 space-y-4">
-        {/* <Project></Project> */}
         {content}
       </div>
     </div>
