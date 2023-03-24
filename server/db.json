@@ -77,12 +77,13 @@
         "id": 2
       },
       "project": {
-        "id": 2,
-        "projectName": "Flight Booking",
-        "colorClass": "color-flight"
+        "id": 3,
+        "projectName": "Product Cart",
+        "colorClass": "color-productCart"
       },
       "deadline": "2023-03-24",
-      "id": 1
+      "id": 1,
+      "status": "pending"
     },
     {
       "taskName": "All day i work",
@@ -92,12 +93,13 @@
         "id": 2
       },
       "project": {
-        "id": 4,
-        "projectName": "Book Store",
-        "colorClass": "color-bookstore"
+        "id": 1,
+        "projectName": "Scoreboard",
+        "colorClass": "color-scoreboard"
       },
       "deadline": "2023-03-24",
-      "id": 2
+      "id": 2,
+      "status": "completed"
     },
     {
       "taskName": "All day i worksdfdsf",
@@ -112,10 +114,11 @@
         "colorClass": "color-productCart"
       },
       "deadline": "2023-03-24",
-      "id": 3
+      "id": 3,
+      "status": "pending"
     },
     {
-      "taskName": "All day i work",
+      "taskName": "helloo bangladesh",
       "teamMember": {
         "name": "Saad Hasan",
         "avatar": "/images/avatars/sadh.png",
@@ -126,8 +129,9 @@
         "projectName": "Product Cart",
         "colorClass": "color-productCart"
       },
-      "deadline": "2023-03-24",
-      "id": 4
+      "deadline": "2023-03-14",
+      "id": 4,
+      "status": "pending"
     }
   ]
 }

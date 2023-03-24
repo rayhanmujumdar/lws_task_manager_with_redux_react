@@ -5,5 +5,6 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:9000",
   }),
+  keepUnusedDataFor: 1800,
   endpoints: (builder) => ({}),
 });
