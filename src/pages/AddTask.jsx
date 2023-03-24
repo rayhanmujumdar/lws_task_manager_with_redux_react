@@ -19,7 +19,7 @@ export default function AddTask() {
     const { data } = await dispatch(
       teamSlice.endpoints.getTeam.initiate(e.target.value)
     );
-    if (data.length > 0) {
+    if (data?.length > 0) {
       setTeam(data[0]);
     }
   };
@@ -27,7 +27,7 @@ export default function AddTask() {
     const { data } = await dispatch(
       projectsApi.endpoints.getProject.initiate(e.target.value)
     );
-    if (data.length > 0) {
+    if (data?.length > 0) {
       setProjectName(data[0]);
     }
   };
@@ -48,6 +48,7 @@ export default function AddTask() {
       addTask(createTask);
     }
   };
+  
   return (
     <div className="container relative">
       <main className="relative z-20 max-w-3xl mx-auto rounded-lg xl:max-w-none">
@@ -76,9 +77,10 @@ export default function AddTask() {
                 onChange={handleTeamMember}
                 name="teamMember"
                 id="lws-teamMember"
+                defaultValue={""}
                 required
               >
-                <option defaultValue="" hidden selected>
+                <option defaultValue="" hidden>
                   Select Job
                 </option>
                 <option>Sumit Saha</option>
@@ -97,8 +99,9 @@ export default function AddTask() {
                 id="lws-projectName"
                 name="projectName"
                 required
+                defaultChecked=""
               >
-                <option defaultValue="" hidden selected>
+                <option defaultValue="" hidden>
                   Select Project
                 </option>
                 <option>Scoreboard</option>

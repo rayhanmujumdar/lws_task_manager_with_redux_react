@@ -84,10 +84,9 @@ export default function Task({ task }) {
               </svg>
             </Link>
           )}
-          <select onChange={handleStatus} className="lws-status">
+          <select value={status} onChange={handleStatus} className="lws-status">
             {options.map((option) => (
               <option
-                selected={option.value === status}
                 key={option.id}
                 value={option.value}
               >
