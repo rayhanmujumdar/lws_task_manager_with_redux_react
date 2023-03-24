@@ -1,35 +1,13 @@
-import React from 'react'
+import React from "react";
 
-export default function Project() {
+export default function Project({ project }) {
+  const { projectName, colorClass } = project;
   return (
     <>
-        <div class="checkbox-container">
-            <input type="checkbox" class="color-scoreboard" checked />
-            <p class="label">Scoreboard</p>
-          </div>
-
-          <div class="checkbox-container">
-            <input type="checkbox" class="color-flight" checked />
-            <p class="label">Flight Booking</p>
-          </div>
-
-          <div class="checkbox-container">
-            <input type="checkbox" class="color-productCart" checked />
-            <p class="label">Product Cart</p>
-          </div>
-
-          <div class="checkbox-container">
-            <input type="checkbox" class="color-bookstore" checked />
-            <p class="label">Book Store</p>
-          </div>
-          <div class="checkbox-container">
-            <input type="checkbox" class="color-blog" checked />
-            <p class="label">Blog Application</p>
-          </div>
-          <div class="checkbox-container">
-            <input type="checkbox" class="color-jobFinder" checked />
-            <p class="label">Job Finder</p>
-          </div>
+      <div className="checkbox-container">
+        <input type="checkbox" className={colorClass} defaultChecked />
+        <p className="label">{projectName}</p>
+      </div>
     </>
-  )
+  );
 }

@@ -4,7 +4,7 @@ import TeamMembers from './teamMembers/TeamMembers'
 
 export default function Sidebar() {
   return (
-    <div class="sidebar">
+    <div className="sidebar">
       {/* <!-- Projects List --> */}
       <Projects></Projects>
 
