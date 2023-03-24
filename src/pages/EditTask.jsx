@@ -11,7 +11,7 @@ export default function EditTask() {
         <div className="justify-center mb-10 space-y-2 md:flex md:space-y-0">
           <form className="space-y-6">
             <div className="fieldContainer">
-              <label for="lws-taskName">Task Name</label>
+              <label htmlFor="lws-taskName">Task Name</label>
               <input
                 type="text"
                 name="taskName"
@@ -35,7 +35,7 @@ export default function EditTask() {
               </select>
             </div>
             <div className="fieldContainer">
-              <label for="lws-projectName">Project Name</label>
+              <label htmlFor="lws-projectName">Project Name</label>
               <select id="lws-projectName" name="projectName" required>
                 <option value="" hidden selected>Select Project</option>
                 <option>Scoreboard</option>
@@ -48,7 +48,7 @@ export default function EditTask() {
             </div>
 
             <div className="fieldContainer">
-              <label for="lws-deadline">Deadline</label>
+              <label htmlFor="lws-deadline">Deadline</label>
               <input type="date" name="deadline" id="lws-deadline" required />
             </div>
 

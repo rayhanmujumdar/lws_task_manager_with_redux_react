@@ -4,6 +4,9 @@ export const projectsApi = apiSlice.injectEndpoints({
     getProjects: builder.query({
       query: () => `/projects`,
     }),
+    getProject: builder.query({
+      query: (name) => `/projects?projectName_like=${name}`
+    })
   }),
 });
 

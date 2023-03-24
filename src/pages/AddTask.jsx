@@ -1,6 +1,53 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { teamSlice } from "../feature/team/teamSlice";
+import { useAddTaskMutation } from "../feature/task/taskSlice";
+import { projectsApi } from "../feature/projects/projectsApi";
+import { useNavigate } from "react-router";
+import Error from "../component/ui/Error";
 
 export default function AddTask() {
+  const [addTask, { isLoading, isError, isSuccess }] = useAddTaskMutation();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [taskName, setTaskName] = useState("");
+  const [team, setTeam] = useState(null);
+  const [projectName, setProjectName] = useState(null);
+  const [deadline, setDeadline] = useState("");
+
+  const handleTeamMember = async (e) => {
+    const { data } = await dispatch(
+      teamSlice.endpoints.getTeam.initiate(e.target.value)
+    );
+    if (data.length > 0) {
+      setTeam(data[0]);
+    }
+  };
+  const handleProjectName = async (e) => {
+    const { data } = await dispatch(
+      projectsApi.endpoints.getProject.initiate(e.target.value)
+    );
+    if (data.length > 0) {
+      setProjectName(data[0]);
+    }
+  };
+  useEffect(() => { 
+    if (isSuccess) {
+      navigate("/");
+    }
+  }, [isSuccess]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const createTask = {
+      taskName,
+      teamMember: team,
+      project: projectName,
+      deadline,
+    };
+    if (team?.id && projectName?.id) {
+      addTask(createTask);
+    }
+  };
   return (
     <div className="container relative">
       <main className="relative z-20 max-w-3xl mx-auto rounded-lg xl:max-w-none">
@@ -9,10 +56,12 @@ export default function AddTask() {
         </h1>
 
         <div className="justify-center mb-10 space-y-2 md:flex md:space-y-0">
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="fieldContainer">
-              <label for="lws-taskName">Task Name</label>
+              <label htmlFor="lws-taskName">Task Name</label>
               <input
+                value={taskName}
+                onChange={(e) => setTaskName(e.target.value)}
                 type="text"
                 name="taskName"
                 id="lws-taskName"
@@ -23,10 +72,17 @@ export default function AddTask() {
 
             <div className="fieldContainer">
               <label>Assign To</label>
-              <select name="teamMember" id="lws-teamMember" required>
-                <option value="" hidden selected>Select Job</option>
+              <select
+                onChange={handleTeamMember}
+                name="teamMember"
+                id="lws-teamMember"
+                required
+              >
+                <option defaultValue="" hidden selected>
+                  Select Job
+                </option>
                 <option>Sumit Saha</option>
-                <option>Sadh Hasan</option>
+                <option>Saad Hasan</option>
                 <option>Akash Ahmed</option>
                 <option>Md Salahuddin</option>
                 <option>Riyadh Hassan</option>
@@ -35,9 +91,16 @@ export default function AddTask() {
               </select>
             </div>
             <div className="fieldContainer">
-              <label for="lws-projectName">Project Name</label>
-              <select id="lws-projectName" name="projectName" required>
-                <option value="" hidden selected>Select Project</option>
+              <label htmlFor="lws-projectName">Project Name</label>
+              <select
+                onChange={handleProjectName}
+                id="lws-projectName"
+                name="projectName"
+                required
+              >
+                <option defaultValue="" hidden selected>
+                  Select Project
+                </option>
                 <option>Scoreboard</option>
                 <option>Flight Booking</option>
                 <option>Product Cart</option>
@@ -48,16 +111,26 @@ export default function AddTask() {
             </div>
 
             <div className="fieldContainer">
-              <label for="lws-deadline">Deadline</label>
-              <input type="date" name="deadline" id="lws-deadline" required />
+              <label htmlFor="lws-deadline">Deadline</label>
+              <input
+                value={deadline}
+                onChange={(e) => setDeadline(e.target.value)}
+                type="date"
+                name="deadline"
+                id="lws-deadline"
+                required
+              />
             </div>
 
             <div className="text-right">
-              <button type="submit" className="lws-submit">Save</button>
+              <button disabled={isLoading} type="submit" className="lws-submit">
+                Save
+              </button>
             </div>
+            {isError && <Error message="There was an error"></Error>}
           </form>
         </div>
       </main>
     </div>
-  )
+  );
 }

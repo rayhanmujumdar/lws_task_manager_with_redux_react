@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Project({ project }) {
-  const { projectName, colorClass } = project;
+  const { projectName, colorClass } = project || {};
   return (
     <>
       <div className="checkbox-container">
