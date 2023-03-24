@@ -15,16 +15,16 @@ export default function TaskItems() {
   if (!isLoading && isError) {
     content = <Error message="There was an error occur"></Error>;
   }
-  if (!isLoading && !isError && tasks.length === 0) {
-    content = <Error message="project item not found"></Error>;
-  }
   if (!isLoading && !isError && tasks.length > 0) {
     content = tasks
-      .filter((task) => projects.includes(task.project.projectName))
-      .filter((task) =>
-        task.taskName.toLowerCase().includes(searchText.toLowerCase())
-      )
-      .map((task) => <Task key={task.id} task={task}></Task>);
+    .filter((task) => projects.includes(task.project.projectName))
+    .filter((task) =>
+    task.taskName.toLowerCase().includes(searchText.toLowerCase())
+    )
+    .map((task) => <Task key={task.id} task={task}></Task>);
+  }
+  if (!isLoading && !isError && content?.length === 0) {
+    content = <Error message="project item not found"></Error>;
   }
   return <div className="lws-task-list">{content}</div>;
 }
