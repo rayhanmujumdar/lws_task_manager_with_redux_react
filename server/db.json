@@ -70,22 +70,6 @@
   ],
   "tasks": [
     {
-      "taskName": "All day i worksdfdsf",
-      "teamMember": {
-        "name": "Saad Hasan",
-        "avatar": "/images/avatars/sadh.png",
-        "id": 2
-      },
-      "project": {
-        "id": 3,
-        "projectName": "Product Cart",
-        "colorClass": "color-productCart"
-      },
-      "deadline": "2023-03-24",
-      "id": 1,
-      "status": "pending"
-    },
-    {
       "taskName": "All day i work",
       "teamMember": {
         "name": "Saad Hasan",
@@ -115,22 +99,6 @@
       },
       "deadline": "2023-03-24",
       "id": 3,
-      "status": "pending"
-    },
-    {
-      "taskName": "helloo bangladesh",
-      "teamMember": {
-        "name": "Saad Hasan",
-        "avatar": "/images/avatars/sadh.png",
-        "id": 2
-      },
-      "project": {
-        "id": 3,
-        "projectName": "Product Cart",
-        "colorClass": "color-productCart"
-      },
-      "deadline": "2023-03-14",
-      "id": 4,
       "status": "pending"
     }
   ]
